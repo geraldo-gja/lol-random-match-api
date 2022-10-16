@@ -12,37 +12,35 @@ import javax.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-public class Champion implements Serializable{
-
+public class Build implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@NotEmpty(message = "Campo NAME é requerido")
-	@Length(min = 2, max = 20, message = "O campo NAME deve ter entre 2 e 20 caracteres")
-	private String name;
-
+	@NotEmpty(message = "Campo BUILD_Name é requerido")
+	@Length(min = 2, max = 20, message = "O campo BUILD_Name deve ter entre 2 e 20 caracteres")
+	private String buildName;
+	
 	//TODO Constructor
 	
-	public Champion() {
+	public Build() {
 		super();
 	}
-	
-	public Champion(Integer id, String name) {
+	public Build(Integer id, String buildName) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.buildName = buildName;
 	}
-
+	
 	//TODO hashCode and equals
-
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name);
+		return Objects.hash(buildName, id);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -51,26 +49,26 @@ public class Champion implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Champion other = (Champion) obj;
-		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
+		Build other = (Build) obj;
+		return Objects.equals(buildName, other.buildName) && Objects.equals(id, other.id);
 	}
-
+	
 	//TODO Gets and Sets
 	
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	public String getName() {
-		return name;
+	
+	public String getBuildName() {
+		return buildName;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setBuildName(String buildName) {
+		this.buildName = buildName;
 	}
+	
 
+	
 }
