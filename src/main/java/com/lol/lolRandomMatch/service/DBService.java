@@ -25,6 +25,8 @@ public class DBService {
 		
 		this.championRepository.save(c);
 		this.buildRepository.save(b);
+		
+		//System.out.println("Nome: " + buildRepository.findById(1) );
 	}
 
 }
