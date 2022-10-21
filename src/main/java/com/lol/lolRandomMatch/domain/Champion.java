@@ -29,7 +29,6 @@ public class Champion implements Serializable{
 	public Champion() {
 		super();
 	}
-	
 	public Champion(Integer id, String name) {
 		super();
 		this.id = id;
@@ -42,7 +41,6 @@ public class Champion implements Serializable{
 	public int hashCode() {
 		return Objects.hash(id, name);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -60,17 +58,13 @@ public class Champion implements Serializable{
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 }
