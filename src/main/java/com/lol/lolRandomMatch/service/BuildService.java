@@ -30,9 +30,7 @@ public class BuildService {
 	public Build findRandom() {
 		
 		List<Build> builds = repository.findAll();
-		
-		Random random = new Random();
-		int idRandom = random.nextInt(builds.size());
+		int idRandom = new Random().nextInt(builds.size());
 						
 		return builds.get(idRandom);
 	}

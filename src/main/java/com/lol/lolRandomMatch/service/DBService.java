@@ -49,18 +49,13 @@ public class DBService {
 		buildList.add(new Build(null, "Assassino"));
 		buildList.add(new Build(null, "Lutador"));
 		buildList.add(new Build(null, "Mago"));
-		buildList.add(new Build(null, "Atiradr"));
+		buildList.add(new Build(null, "Atirador"));
 		buildList.add(new Build(null, "Suporte"));
 		buildList.add(new Build(null, "Tanque"));
 		
 		this.championRepository.saveAll(championList);
 		this.buildRepository.saveAll(buildList);
-		Champion c = new Champion(null, "Master Yi");
-		Build b = new Build(null, "Lutador");
-		
-		this.championRepository.save(c);
-		this.buildRepository.save(b);
-		
+
 		//System.out.println("Nome: " + buildRepository.findById(1) );
 	}
 

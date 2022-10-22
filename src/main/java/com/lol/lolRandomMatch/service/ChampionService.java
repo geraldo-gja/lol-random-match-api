@@ -8,7 +8,6 @@ import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.databind.deser.DataFormatReaders.Match;
 import com.lol.lolRandomMatch.domain.Champion;
 import com.lol.lolRandomMatch.repositories.ChampionRepository;
 
@@ -31,9 +30,7 @@ public class ChampionService {
 	public Champion findRandom() {
 		
 		List<Champion> champs = repository.findAll();
-		
-		Random random = new Random();
-		int idRandom = random.nextInt(champs.size());
+		int idRandom = new Random().nextInt(champs.size());
 						
 		return champs.get(idRandom);
 	}

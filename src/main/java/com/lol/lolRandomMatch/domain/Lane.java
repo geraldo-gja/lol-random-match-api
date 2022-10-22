@@ -1,6 +1,6 @@
 package com.lol.lolRandomMatch.domain;
 
-enum Lane {
+public enum Lane {
 	
 	TOP		(1, "Top"),
 	JUNGLE	(2, "Jungle"),
