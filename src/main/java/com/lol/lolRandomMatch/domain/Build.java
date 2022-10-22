@@ -19,16 +19,16 @@ public class Build{
 	
 	@NotEmpty(message = "Campo BUILD_Name é requerido")
 	@Length(min = 2, max = 20, message = "O campo BUILD_Name deve ter entre 2 e 20 caracteres")
-	private String buildName;
+	private String name;
 	
 	//TODO Constructor
 	public Build() {
 
 	}
 	
-	public Build(Integer id, String buildName) {
+	public Build(Integer id, String name) {
 		this.id = id;
-		this.buildName = buildName;
+		this.name = name;
 	}
 	
 	//TODO Gets and Setss
@@ -38,10 +38,10 @@ public class Build{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getBuildName() {
-		return buildName;
+	public String getName() {
+		return name;
 	}
-	public void setBuildName(String buildName) {
-		this.buildName = buildName;
+	public void setName(String name) {
+		this.name = name;
 	}
 }

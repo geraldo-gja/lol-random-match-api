@@ -33,7 +33,7 @@ public class ChampionService {
 		List<Champion> champs = repository.findAll();
 		
 		Random random = new Random();
-		int idRandom = random.nextInt(champs.size() - 1);
+		int idRandom = random.nextInt(champs.size());
 						
 		return champs.get(idRandom);
 	}
