@@ -1,0 +1,11 @@
+
+* No arquivo application-dev.properties
+
+* linha 6: 
+  spring.jpa.hibernate.ddl-auto=create
+  
+  - create: cria o banco de dados e insere os dados que deixou configurado no BDService, 
+            indicado para usar somente ao executar o projeto pela primeira vez
+            
+  - nome: Uma vez que já tiver criado os dados iniciais, deve mudar para none, 
+          assim ele apenas faz a conexão com o BD, mantendo os dados persistidos anteriormente
