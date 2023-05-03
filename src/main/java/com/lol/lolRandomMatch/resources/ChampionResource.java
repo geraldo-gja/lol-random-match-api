@@ -66,7 +66,7 @@ public class ChampionResource {
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<Champion> update( @PathVariable Integer id, @Valid @RequestBody Champion objDto ) {
 		
-		Champion newObj = service.update(id, objDto);
+		service.update(id, objDto);
 		
 		return ResponseEntity.ok().body( new Champion() );
 	}

@@ -40,14 +40,17 @@ public class RandomMatchResource {
 
 		List<RandomChampionDTO> randomTeam = new ArrayList<>();
 		
-		for (int i = 1; i < 6; i++) {
-
-			Champion champ = generateRandomChampion(); 
-			Build build = buildList.get( generateRandomBuild() ) ;
-			Lane lane = generateLane(i);
-
-			RandomChampionDTO randomChamp = new RandomChampionDTO(champ, build, lane);
-			randomTeam.add(randomChamp);
+		for (int j = 0; j < 2; j++) {  //vai dar 2 loops, o primeiro forma o Time 01, o segundo forma o time 02
+					
+			for (int i = 1; i < 6; i++) {
+				
+				Champion champ = generateRandomChampion(); 
+				Build build = buildList.get( generateRandomBuild() ) ;
+				Lane lane = generateLane(i);
+				
+				RandomChampionDTO randomChamp = new RandomChampionDTO(champ, build, lane);
+				randomTeam.add(randomChamp);
+			}
 		}
 
 		return ResponseEntity.ok().body(randomTeam);
