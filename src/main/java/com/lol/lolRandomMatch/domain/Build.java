@@ -21,7 +21,6 @@ public class Build{
 	@Length(min = 2, max = 20, message = "O campo BUILD_Name deve ter entre 2 e 20 caracteres")
 	private String name;
 	
-	//TODO Constructor
 	public Build() {
 
 	}
@@ -31,7 +30,6 @@ public class Build{
 		this.name = name;
 	}
 	
-	//TODO Gets and Setss
 	public Integer getId() {
 		return id;
 	}

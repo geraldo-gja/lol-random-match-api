@@ -23,7 +23,6 @@ public class Champion{
 	@Length(min = 2, max = 20, message = "O campo NAME deve ter entre 2 e 20 caracteres")
 	private String name;
 
-	//TODO Constructor
 	public Champion() {
 		
 	}
@@ -37,13 +36,11 @@ public class Champion{
 		this.name = champ.getName();
 	}
 
-	//TODO hashCode and equals
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, name);
 	}
 
-	//TODO Gets and Sets
 	public Integer getId() {
 		return id;
 	}
